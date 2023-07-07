@@ -1,0 +1,22 @@
+.container{
+    display: inline-flex;
+    flex-flow: column;
+    width: 50%;
+    border: 1px solid #ccc ;
+
+}
+.title{
+    background-color: azure;
+    padding: 1rem;
+    color: #000;
+
+}
+.tile{
+    background-color: #db504a;
+    opacity: 0.8;
+    color: #000;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+   
+
+}

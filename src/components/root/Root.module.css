@@ -1,0 +1,29 @@
+
+.header{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    color: #db504a;
+    background: #fff;
+    padding: 1rem;
+    font-family: 'Caprasimo', cursive;
+}
+
+.nav{
+    display: inline-block;
+    color: #ffffff;
+    width: 100%;
+}
+
+
+
+.text{
+    color: #fff;
+    text-align: center;
+}
+
+.item{
+    display: inline-block;
+    width: 50%;
+    padding: 1rem;
+}

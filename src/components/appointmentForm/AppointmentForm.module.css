@@ -1,0 +1,16 @@
+.input{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.button{
+    border: none;
+    background: #db504a;
+    color: #fff;
+    padding: 0.7rem;
+    width: 100%;
+    cursor: pointer;
+    
+}
