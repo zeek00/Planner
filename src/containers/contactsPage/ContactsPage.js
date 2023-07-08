@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-
 import { ContactForm } from "../../components/contactForm/ContactForm";
 import { TileList } from "../../components/tileList/TileList";
 import styles from './ContactsPage.module.css'
+import PropTypes from 'prop-types';
 
 export const ContactsPage = ({contacts, handleContacts}) => {
   /*
@@ -63,3 +63,8 @@ export const ContactsPage = ({contacts, handleContacts}) => {
     </div>
   );
 };
+
+ContactsPage.propTypes = {
+  contacts: PropTypes.array.isRequired,
+  handleContacts: PropTypes.func.isRequired
+}

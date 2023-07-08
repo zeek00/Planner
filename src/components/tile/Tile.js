@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./Tile.module.css"
+import PropTypes from 'prop-types';
+
 
 export const Tile = ({tile}) => {
   const descriptionValues = Object.values(tile); 
@@ -12,3 +14,7 @@ export const Tile = ({tile}) => {
     </div>
   );
 };
+
+Tile.propTypes = {
+  tile: PropTypes.object.isRequired
+}
