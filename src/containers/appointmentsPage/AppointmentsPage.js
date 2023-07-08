@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-
 import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
 import { TileList } from "../../components/tileList/TileList";
 import styles from './AppointmentsPage.module.css'
+import PropTypes from 'prop-types';
 
 export const AppointmentsPage = ({contacts, appointments, handleAppointments}) => {
   /*
@@ -13,7 +13,7 @@ export const AppointmentsPage = ({contacts, appointments, handleAppointments}) =
  const [contact, setContact] = useState('');
  const [date, setDate] = useState('');
  const [time, setTime] = useState('');
- const [busy, setBusy] = useState('');
+ const [busy, setBusy] = useState(false);
 
 
   const handleSubmit = (e) => {
@@ -58,3 +58,9 @@ export const AppointmentsPage = ({contacts, appointments, handleAppointments}) =
     </div>
   );
 };
+
+AppointmentsPage.propTypes = {
+  contacts: PropTypes.array.isRequired, 
+  appointments: PropTypes.array.isRequired,
+  handleAppointments: PropTypes.func.isRequired
+}

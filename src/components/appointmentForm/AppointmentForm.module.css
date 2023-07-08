@@ -1,7 +1,7 @@
 .input{
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    padding: 0.8rem;
+    
     
 }
 
@@ -13,4 +13,10 @@
     width: 100%;
     cursor: pointer;
     
+}
+
+.busy{
+    color: #fff;
+    font-size: small;
+    padding-left: 0.6rem;
 }

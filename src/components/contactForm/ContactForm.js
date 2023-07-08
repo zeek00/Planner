@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./ContactForm.module.css";
-
+import PropTypes from 'prop-types';
 
 export const ContactForm = ({
   name,
@@ -40,7 +40,7 @@ export const ContactForm = ({
         className={styles.input}
         type="tel"
         id="phone"
-        pattern="^\+[1-9]\d{1,14}$"
+        pattern="^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$"
         value={phone}
         aria-label="Enter your phone"
         placeholder="Enter your phone" 
@@ -63,3 +63,13 @@ export const ContactForm = ({
   );
 };
 
+ContactForm.propTypes = {
+  name: PropTypes.string.isRequired,
+  setName: PropTypes.func.isRequired,
+  phone: PropTypes.string.isRequired,
+  setPhone: PropTypes.func.isRequired,
+  email: PropTypes.string.isRequired,
+  setEmail: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  duplicated: PropTypes.bool
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { ContactPicker } from "../contactPicker/ContactPicker";
 import styles from './AppointmentForm.module.css'
-
+import PropTypes from 'prop-types';
 
 const getTodayString = () => {
   const [month, day, year] = new Date()
@@ -82,10 +82,25 @@ export const AppointmentForm = ({
         contacts={contacts} 
         onChange={handleContactChange}
       />
-      {busy && <p>You already have an appointment slot by this time!</p>}
+      {busy && <p className={styles.busy}>You already have an appointment slot by this time!</p>}
       <button className={styles.button} type="submit">Add Appointment</button>
 
 
     </form>
   );
 };
+
+AppointmentForm.propTypes = {
+  contacts: PropTypes.array.isRequired,
+  title: PropTypes.string.isRequired,
+  setTitle: PropTypes.func.isRequired,
+  contact: PropTypes.string.isRequired,
+  setContact: PropTypes.func.isRequired,
+  date: PropTypes.string.isRequired,
+  setDate: PropTypes.func.isRequired,
+  time: PropTypes.string.isRequired,
+  setTime: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  busy: PropTypes.bool.isRequired
+}
+
